@@ -13,7 +13,7 @@
         </div>
         <q-space />
 
-        <q-btn flat color="white" label="ورود و ثبت نام"
+        <q-btn flat color="white" label="ورود و ثبت نام" to="/Signup"
           style="border: 2px solid  #24CDD8; border-radius: 64px; margin-right: 55px; padding: 13px 32px;" />
       </q-toolbar>
     </q-header>

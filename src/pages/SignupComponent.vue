@@ -25,10 +25,20 @@
                       <input class="password" placeholder="تایید رمز عبور" type="password" id="input-1"
                         style="direction: rtl;" />
                     </div>
-                    <div class="login-bt-fp">
+                    <div class="login-bt-fp" @click="showAlert">
                       <div class="login" style="cursor: pointer;">
-                        <div class="text-wrapper-4" style="cursor: pointer;">Signup</div>
+                        <div class="text-wrapper-4" style="cursor: pointer;">ثبت نام </div>
                       </div>
+                      <q-dialog v-model="alert" persistent>
+                        <q-card>
+                          <q-card-section>
+                            ثبت نام شما با موفقیت انجام شد
+                          </q-card-section>
+                          <q-card-actions align="right">
+                            <q-btn flat label="Close" v-close-popup />
+                          </q-card-actions>
+                        </q-card>
+                      </q-dialog>
                     </div>
                   </div>
                 </div>
@@ -43,6 +53,23 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      alert: false
+    }
+  },
+  methods: {
+    showAlert() {
+      this.alert = true
+    }
+  }
+}
+</script>
+
+
 
 <style scoped>
 .signup {
